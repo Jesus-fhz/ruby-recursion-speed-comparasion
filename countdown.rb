@@ -8,10 +8,6 @@ def countdown (n = 10)
 end
 
 def countdown_rec( n = 10)
-    #Define a base case: a condition under which
-    #this fucntion STOPS calling itself recursively;
-    #otherwise, you will have an infinite loop/regress
-    #(actually you won't, you will blow the stack)
     if n < 0
         #puts "Blats off!"
     else
@@ -23,8 +19,9 @@ def countdown_rec( n = 10)
 end
 
 Benchmark.ips do |x|
-    x.report('countdown: ')        { countdown() }
-    x.report('countdown_rec: ') { countdown_rec() }
+    x.config(:time => 10, :warmup => 2) #change time value to see how many iterations times n
+    x.report('countdown: ')        { countdown(100) }
+    x.report('countdown_rec: ') { countdown_rec(100) }
     x.compare!
 end
 
