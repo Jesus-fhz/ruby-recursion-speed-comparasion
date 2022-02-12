@@ -7,7 +7,7 @@ Testing the speed of recursivity  in ruby, Examples used: a simple countdown and
 ## How to use ?
 - Downlaod/clone repo
 - gem install benchmark-ips 
-- Change values in the bencharmkar function to see different outputs
+- Change values in the benchmark function to see different outputs
 - To run just: ruby file.rb
 
 
