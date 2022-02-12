@@ -43,9 +43,9 @@ end
 
  Benchmark.ips do |x|
     x.config(:time => 10, :warmup => 2) #change time value to see how many iterations times n
-    x.report('fib_loop: ')        { fib_loop(32) }
-    x.report('fib_rec_no_memoization: ') { fib_rec_no_memoization(32) }
-    x.report('fib_rec_with_memoization_hash: ') { fib_rec_with_memoization_hash(32) }
-    x.report('fib_rec_with_memoization_array: ') { fib_rec_with_memoization_array(32) }
+    x.report('fib_loop: ')        { fib_loop(32) } # change the value 
+    x.report('fib_rec_no_memoization: ') { fib_rec_no_memoization(32) } # change the value
+    x.report('fib_rec_with_memoization_hash: ') { fib_rec_with_memoization_hash(32) } # change the value
+    x.report('fib_rec_with_memoization_array: ') { fib_rec_with_memoization_array(32) } # change the value
     x.compare!
 end
